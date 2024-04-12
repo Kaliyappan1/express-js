@@ -6,7 +6,7 @@ const shoprouter = require('./routers/shop');
 
 
 app.use(bodyParser.urlencoded({extended: false}));
-app.use('/kali', adminRoutes);
+app.use(adminRoutes);
 app.use(shoprouter)
 app.use((req, res, next) => {
     res.status('404 page not found');
