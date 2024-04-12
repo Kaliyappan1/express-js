@@ -2,26 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add product</title>
+    <title>Add Product</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    
-<header>
-    <nav>
-        <li><a href="/">shop</a></li>
-        <li><a href="/add-product">add product</a></li>
+        <header class="main-header">
+            <nav class="main-header__nav">
+                <ul class="main-header__item-list">
+                    <li class="main-header__item"><a href="/">Shop</a></li>
+                    <li class="main-header__item"><a class="active" href="/admin/add-product">Add Product</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <form class="product-form" action="/add-product" method="POST">
+                <div class="form-control">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title"/>
+                </div>
+                <button type="submit">Add Product</button>
+            </form>
+        </main>
 
-    </nav>
-</header>
-<main>
-    <form action="/add-product" method="post">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name"><br><br>
-        <label for="price">Price</label>
-        <input type="text" name="price" id="price"><br>
-        <input onclick="location='index.html'" type="submit" value="Add product">
-    </form>
-</main>
 </body>
 </html>
